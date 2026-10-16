@@ -1,0 +1,60 @@
+
+///////////////////////////
+| Colección      | Linked              | Hash          | Tree          | Nota                      |
+| -------------- | ------------------- | ------------- | ------------- | ------------------------- |
+| **ArrayList**  | ❌                   | ❌             | ❌             | Siempre array dinámico    |
+| **LinkedList** | ✅                   | ❌             | ❌             | Orden de inserción        |
+
+### 🔗 **Linked**
+
+* Mantiene los elementos **en el orden en que los añades**.
+* Internamente usa **listas enlazadas** (cada elemento apunta al siguiente).
+* Ejemplo:
+
+Set<String> linked = new LinkedHashSet<>();
+linked.add("A");
+linked.add("C");
+linked.add("B");
+System.out.println(linked); // Salida: [A, C, B] → respeta orden de inserción
+
+### #️⃣ **Hash**
+
+* No mantiene orden; los elementos se guardan según su **valor hash**.
+* Búsqueda, inserción y borrado son **muy rápidos**.
+* Ejemplo:
+
+Set<String> hash = new HashSet<>();
+hash.add("A");
+hash.add("C");
+hash.add("B");
+System.out.println(hash); // Salida: [A, B, C] o cualquier orden
+
+### 🌳 **Tree**
+
+* Mantiene los elementos **ordenados automáticamente** (según el Comparable o Comparator).
+* Internamente usa un **árbol rojo-negro**.
+* Ejemplo:
+
+Set<String> tree = new TreeSet<>();
+tree.add("A");
+tree.add("C");
+tree.add("B");
+System.out.println(tree); // Salida: [A, B, C] → orden natural
+
+---
+
+## 3️⃣ Cómo elegir
+
+| Implementación | Orden                        | Rapidez    | Nota                                      |
+| -------------- | ---------------------------- | ---------- | ----------------------------------------- |
+| **Hash**       | No                           | Muy rápida | Ideal cuando solo importa buscar          |
+| **Linked**     | Sí, según inserción          | Rápida     | Útil si importa el orden de llegada       |
+| **Tree**       | Sí, orden natural o definido | Media      | Ideal para mantener orden automáticamente |
+
+---
+
+💡 **Clave que te ayuda a recordar:**
+
+* **Hash = velocidad, sin orden**
+* **Linked = mantiene el orden de inserción**
+* **Tree = mantiene orden automático**

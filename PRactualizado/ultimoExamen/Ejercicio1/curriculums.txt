@@ -1,0 +1,6 @@
+Persona1:Java C# C Gemini Go 
+Persona2:Java SpringBoot
+Persona3:Java NodeJS Javascript Android SQL Angular
+Persona4:Filosofia Historia Literatura Ingles Biologia
+Persona5:React PHP python SQL
+Persona6:bash typescript powershell sql javascript

@@ -1,0 +1,96 @@
+
+## 1️⃣ **Pilas (Stack)**
+
+* Una **pila** es **LIFO** → Last In, First Out
+  (el último que entra es el primero que sale).
+* Se parece a **una torre de platos**: pones uno encima y quitas del tope.
+
+### 🔹 Cómo crear una pila
+
+**Opción A: Usando `Stack` clásico**
+
+Stack<String> pila = new Stack<>();
+pila.push("A"); // Añade al tope
+pila.push("B");
+pila.push("C");
+
+System.out.println(pila.pop()); // C → lo quita del tope
+System.out.println(pila.peek()); // B → lo mira sin quitarlo
+```
+
+**Métodos importantes de Stack**
+
+* `push(E e)` → añade al tope
+* `pop()` → quita y devuelve el elemento del tope
+* `peek()` → devuelve el elemento del tope sin quitarlo
+* `isEmpty()` → comprueba si está vacía
+
+---
+
+**Opción B: Usando `Deque` como pila (recomendado en Java moderno)**
+
+```java
+Deque<String> pila = new ArrayDeque<>();
+pila.push("A"); // Añade al tope
+pila.push("B");
+pila.push("C");
+
+System.out.println(pila.pop()); // C
+System.out.println(pila.peek()); // B
+```
+
+> ✅ Ventaja: `ArrayDeque` es más rápido y moderno que `Stack`.
+
+---
+
+## 2️⃣ **Colas (Queue)**
+
+* Una **cola** es **FIFO** → First In, First Out
+  (el primero que entra es el primero que sale).
+
+### 🔹 Cómo crear una cola
+
+Queue<String> cola = new LinkedList<>();
+cola.add("A"); // Añade al final
+cola.add("B");
+cola.add("C");
+
+System.out.println(cola.poll()); // A → lo quita del frente
+System.out.println(cola.peek()); // B → lo mira sin quitarlo
+```
+
+**Métodos importantes de Queue**
+
+* `add(E e)` o `offer(E e)` → añade al final
+* `poll()` → quita y devuelve el primer elemento
+* `peek()` → devuelve el primer elemento sin quitarlo
+* `isEmpty()` → comprueba si está vacía
+
+---
+
+**Opción B: Cola doblemente terminada (`Deque`)**
+
+* `Deque` puede funcionar **como pila o cola**.
+* Ejemplo como **cola**:
+
+```java
+Deque<String> cola = new ArrayDeque<>();
+cola.addLast("A"); // Añade al final
+cola.addLast("B");
+cola.addLast("C");
+
+System.out.println(cola.removeFirst()); // A → quita del frente
+System.out.println(cola.peekFirst());   // B
+```
+
+
+### ⚡ Resumen rápido
+
+| Tipo     | Concepto | Implementación típica           | Métodos clave                  |
+| -------- | -------- | ------------------------------- | ------------------------------ |
+| **Pila** | LIFO     | `Stack`, `Deque` (`push`/`pop`) | `push`, `pop`, `peek`          |
+| **Cola** | FIFO     | `Queue`, `Deque` (`add`/`poll`) | `add`, `offer`, `poll`, `peek` |
+
+
+Queue<String> cola = new LinkedList<>();
+LinkedList<String> pila = new LinkedList<>();

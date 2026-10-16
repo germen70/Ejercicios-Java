@@ -1,0 +1,7 @@
+alter user 'root'@'localhost' identified by 'toor';
+
+PARA EJECUTAR MYSQL CON OBJETOS TENGO QUE PONER ESTA LINEA SI O SI:
+
+javac -cp .:mysql-connector-j-9.6.0.jar EjReservas.java Vuelo.java Pasajero.java
+
+java -cp .:mysql-connector-j-9.6.0.jar EjReservas

@@ -1,0 +1,141 @@
+listas(LinkedList(colas o pilas) y ArrayList):
+    
+    add()   añade
+    remove()    elimina
+    size()  tamaño
+    get(posicion)   obtines lo que haya en la posicion()
+    indexOf()   obtines la posicion de lo que haya entre()
+    clear() limpia
+    isEmpty()   boolean de si esta vacia
+    sort()  ordena de menor a mayor (se utiliza Collection.sort(lista))
+    reverse()   invierte los valores(el primero es el ultimo y viceversa)
+    max()
+    min()
+
+    en las LinkedList se puede(pero es mejor usar una cola o pila):
+    addFirst() 	Adds an element to the beginning of the list
+    addLast() 	Add an element to the end of the list
+    removeFirst() 	Remove an element from the beginning of the list
+    removeLast() 	Remove an element from the end of the list
+    getFirst() 	Get the element at the beginning of the list
+    getLast() 	Get the element at the end of the list
+
+
+pila(stack):el primero en salir es el ULTIMO EN ENTRAR
+    isEmpty()   boolean de si esta vacia
+    push()    añade un elemento
+    pop() devuelve y elimina
+    peek()  devuelve // si esta vacia devuelve Exception
+    search()    busca el elemento y devuelve su posicion
+
+colas(queue):el primero en salir ES EL PRIMERO
+    add()//offer()          añade ylanza Exception si hubiese// añade y no lanza Exception si hubiese
+    remove()//poll()  devuelve y elimina  y si esta bacia lanza Exception//devuelve y elimina y si esta vacia devuelve null
+    element()//peek()   devuelve el elemento y si esta bacia lanza Exception// si esta vacia devuelve null
+
+    se usan en ArrayDeque, LinkedList
+
+set: NO PERMITE DUPLICADOS
+    HashSet: Set<Integer> numeros = new HashSet<>(); NO MANTIENE EL ORDEN al añadir
+    LinkedHashSet: Set<String> nombres = new LinkedHashSet<>(); SI MANTIENE EL ORDEN
+    TreeSet: Set<Integer> edades = new TreeSet<>();   ORDENA AUTOMATICAMENTE
+
+    .add: Añade un elemento a la colección
+    .isEmpty(): Comprueba si está vacía o no
+    .size(): Devuelve el número de elementos de HashSet
+    .contains(Elemento): Si el elemento existe en el HashSet
+    .remove(Elemento): Devuelve falso si el elemento no existe y lo elimina
+    .clear(): Elimina todos los elementos de HashSet
+
+map:
+    ORDEN NO IMPORTA:
+    HashMap              HashMap<String, Integer> hashMap = new HashMap<>();
+    ORDENA SEGUN LA ENTRADA DE DATOS
+    LinkedHashMap         LinkedHashMap<String, Integer> linkedMap = new LinkedHashMap<>();
+    ORDENA ALFABETICAMENTE SEGUN LA CLAVE
+    TreeMap ordena   TreeMap<String, Integer> treeMap = new TreeMap<>();
+
+    map.put(clave, valor);       // agrega. Si la clave ya existe, reemplaza el valor.  (key/value)
+    map.get(clave);              // devuelve el valor de la clave
+    map.remove(clave);           // elimina la clave(y su valor)
+    map.containsKey(clave);      // verifica si existe la clave
+    map.containsValue(valor);    // verifica si existe el valor
+    mapa.replace(VALOR, nuevo valor); lo mismo que el put pero si no existe, no hace nada
+    isEmpty()	   Comprueba si el mapa está vacío.
+    size()	      Devuelve la cantidad de elementos (pares clave → valor).
+    clear()	       Elimina todos los elementos del mapa.
+
+    para recorrer los mapas:
+    a) keySet() → conjunto de claves
+    for (String clave : map.keySet()) {
+        System.out.println(clave);
+    }
+
+    b) values() → colección de valores
+    for (Integer valor : map.values()) {
+        System.out.println(valor);
+    }
+
+    c) entrySet() → conjunto de pares clave → valor
+    for (Map.Entry<String, Integer> entry : map.entrySet()) {
+        System.out.println(entry.getKey() + " -> " + entry.getValue());
+    }
+
+final:
+| Método          | Qué hace                                       | Uso típico                                        |
+| --------------- | ---------------------------------------------- | ------------------------------------------------- |
+| `addFirst(E e)` | Añade un elemento al **inicio** de la lista    | Para pilas (LIFO) → equivalente a `push`          |
+| `addLast(E e)`  | Añade un elemento al **final** de la lista     | Para colas (FIFO) → equivalente a `offer` o `add` |
+| `removeFirst()` | Elimina el **primer elemento**                 | Para colas → equivalente a `poll`                 |
+| `removeLast()`  | Elimina el **último elemento**                 | Para pilas invertidas o listas dobles             |
+| `getFirst()`    | Devuelve el **primer elemento** sin eliminarlo | Para ver quién está primero en la cola            |
+| `getLast()`     | Devuelve el **último elemento** sin eliminarlo | Para ver el último elemento o la cima de la pila  |
+
+
+Arraylist:
+
+
+1. **`add(E e)`**
+   Añade un elemento al final del `ArrayList`.
+
+2. **`add(int index, E e)`**
+   Inserta un elemento en la posición indicada y desplaza los demás.
+
+3. **`get(int index)`**
+   Devuelve el elemento que está en la posición indicada.
+
+4. **`set(int index, E e)`**
+   Sustituye el elemento de una posición por otro nuevo.
+
+5. **`remove(int index)`**
+   Elimina el elemento que está en esa posición.
+
+6. **`remove(Object o)`**
+   Elimina la primera aparición del objeto indicado.
+
+7. **`clear()`**
+   Elimina todos los elementos del `ArrayList`.
+
+8. **`size()`**
+   Devuelve el número de elementos que contiene la lista.
+
+9. **`isEmpty()`**
+   Devuelve `true` si la lista está vacía, `false` si no.
+
+10. **`contains(Object o)`**
+    Comprueba si la lista contiene el elemento indicado.
+
+11. **`indexOf(Object o)`**
+    Devuelve la primera posición en la que aparece el elemento (o `-1` si no está).
+
+12. **`lastIndexOf(Object o)`**
+    Devuelve la última posición en la que aparece el elemento.
+
+13. **`toArray()`**
+    Convierte el `ArrayList` en un array.
+
+14. **`clone()`**
+    Crea una copia superficial del `ArrayList`.
+
+15. **`equals(Object o)`**
+    Compara si dos listas tienen los mismos elementos en el mismo orden.

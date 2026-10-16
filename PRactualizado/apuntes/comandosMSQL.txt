@@ -1,0 +1,17 @@
+mysql -u root -ptoor
+use contactos
+show tables;
+select * from contacto;
+
+
+//esto sirve para poder ejecutar tanto la consulta como la insercion
+
+javac /*poner los objetos.java si hubiese*/
+javac -cp .:mysql-connector-j-9.6.0.jar /*poner los objetos.java si hubiese*/
+java -cp .:mysql-connector-j-9.6.0.jar PruebaDB.java objetos.java
+
+
+PARA WINDOW:
+cd "C:\Program Files\MySQL\MySQL Server 8.0\bin"
+
+.\mysql -u root -ptoor

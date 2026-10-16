@@ -1,0 +1,90 @@
+The trim() method removes whitespace from both ends of a string.
+if(string.charAt(0)== 'P') UTIL SABER
+
+    Tipos de datos:
+        int
+        double
+        boolean
+        char
+        String
+
+        long
+        short
+        float
+
+        VALOR CONSTANTE, NO PUEDE CAMBIAR SU VALOR Y ADEMAS EL NOMBRE ES EN MAYUSCULAS
+        final int DIAS_SEMANA = 7;
+
+CASTING:
+
+    valores decimales y resultado entero, hacemos que el resultado
+    sea solo decimal (se olvida de los decimales)
+    double a = 8
+    double b = 5
+    int x = (int)(a/b)
+
+
+printf: utiliza formatos y hay muchos. EJ:
+    System.out.printf("Buenos días, mi nombre es %s%n",nombre);       s=sera el siguiente elemento (nombre en eeste caso), n = es para salto de linea
+
+
+.chartAt(0):sirve para saber que letra se encuentra en x posicion (la primera siempre es 0)
+.replace("a", "-"): sirve para sustituir letras por otras (ej: cambia las a y pone -)
+s.chartAt(s.lenght()-1); :Se unen 2 y sirve para contar cuantas letras tiene una palabra (s.lenght(),
+luego se resta 1 (ya que se empieza a contar desde 0)), y con esto me dice la ultima letra de
+cualquier palabra
+Char.isDigit(c); Te dice si el caracter "c" es un digito  //true o false
+Char.isUpperCase(i) Te lanza true o false si "i" es  MAYUSCULA o no
+Char.isLowerCase(i) Te lanza true o false si "i" es  miniscula o no
+
+-Math.abs (nota); TE COMVIERTE nota A POSITIVO SI ESTUVIESE EN NEGATIVO
+
+-Math.max( , , )
+-Math.min( , )
+Math.floor(x) → redondea hacia abajo
+Math.ceil(x) → redondea hacia arriba
+Math.round(x) → redondeo normal
+-Integer.MIN_VALUE
+-Integer.MAX_VALUE
+
+formato para decimales:
+    -Primero importar esto:
+        import java.text.DecimalFormat;
+
+    -Luego definimos el digito:
+        DecimalFormat df = new DecimalFormat("0.00"); //cambiamos los numero segun lo que queramos
+        
+    -para usar ponermos esto:
+        df.format(numero);
+        Ojo que devuelve un string (deja de ser un double)
+
+PARA MODIFICAR UNA LISTA SI SUPIESE LA POSICION:
+        OBJETO DE LA LISTA.setATRIBUTO(nuevo valor)
+        contactois.get(op-1).setEdad(contactois.get(op-1).getEdad()-2); //entender esta linea: le resta 2 a la edad del numero que se eligio en op
+SINO:
+    for (Oferta oferta : listaOferta) {
+                    if(oferta.getId() == codoferta){
+                        oferta.setPrecio(precio);
+                    }
+
+                } 
+
+FORMAS DE ELIMINAR ALGO DE UNA LISTA MIENTRAS SE RECORRE:
+lista.removeIf(p -> p.getNombre().equals("Juan")); para eliminar un objeto de  una lista
+
+Iterator<Persona> it = lista.iterator();
+
+while (it.hasNext()) {
+    Persona p = it.next();
+
+    if (p.getNombre().equals("Juan")) {
+        it.remove(); // ✔ correcto
+    }
+}
+for (int i = 0; i < lista.size(); i++) {
+    if (lista.get(i).getNombre().equals("Juan")) {
+        lista.remove(i);
+        i--; // 🔥 importante
+    }
+}
+
